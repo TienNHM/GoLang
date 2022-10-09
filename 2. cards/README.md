@@ -2,6 +2,9 @@
 
 ## Khai báo biến (variables)
 
+<summary>
+<details>
+
 ```go
 var card string = "Ace of Spades"
 ```
@@ -102,3 +105,55 @@ func main() {
 	fmt.Println(deckSize)
 }
 ```
+
+</details>
+</summary>
+
+
+## Function và kiểu dữ liệu trả về
+
+<summary>
+<details>
+
+```go
+func NewCard() string {
+    return "Five of Diamonds"
+}
+```
+Trong đó:
+- `func`: từ khóa.
+- `NewCard`: tên function.
+- `string`: kiểu dữ liệu trả về của function, có thể có hoặc không. Mọi hàm có kiểu trả về, bắt buộc phải xác định kiểu dữ liệu - đây có thể là một trong số những kiểu dữ liệu cơ bản hoặc do người dùng tự định nghĩa.
+> Ví dụ sau là không hợp lệ, vì đây là hàm không trả về dữ liệu:
+```go
+func getSize() {
+    return "30 meters"
+}
+```
+Để sửa lỗi, ta có thể thêm kiểu dữ liệu trả về cho hàm như say:
+```go
+func getSize() string {
+    return "30 meters"
+}
+```
+
+Trong chương trình, một function được gọi (`invoke`) thông qua tên của nó. 
+```go
+package main
+
+import "fmt"
+
+func main() {
+	card := newCard()
+
+	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Ace of Spades"
+}
+```
+Ở ví dụ trên, hàm `newCard` trả về dữ liệu kiểu `string`. Khi gọi hàm để gán giá trị cho biến `card`, thì biến này sẽ có kiểu dữ liệu `string` (là kiểu trả về của hàm `newCard`).
+
+</details>
+</summary>
