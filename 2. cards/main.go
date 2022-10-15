@@ -1,15 +1,24 @@
 package main
 
-import "fmt"
-
-var deckSize int = 10
+import (
+	"fmt"
+)
 
 func main() {
 	// var card string = "Ace of Spades"
 	card := newCard()
 
+	cards := []string{"A", "B"}
+
+	numbers := []int{1, 2}
+
+	cards = append(cards, "C", "D")
+	x := len(cards)
+
 	fmt.Println(card)
-	fmt.Println(deckSize)
+	fmt.Println(cards)
+	fmt.Println(x)
+	fmt.Println(numbers)
 }
 
 func newCard() string {
